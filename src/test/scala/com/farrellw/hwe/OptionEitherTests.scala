@@ -71,7 +71,7 @@ class OptionEitherTests extends FunSpec {
       val expected = Left("Customer not tall enough")
 
       val actual = OptionEither.rollerCoasterHeightChecker(c)
-      assert(actual.isLeft))
+      assert(actual.isLeft)
     }
 
     it("Should return the customer when it's high enough"){
