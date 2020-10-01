@@ -22,6 +22,24 @@ class CollectionsTest extends FunSpec {
     }
   }
 
+  describe("Filter"){
+    it("Should take out negative numbers"){
+      val input = List(-2, -1, 0, 1, 2)
+      val expected = List(0, 1, 2)
+
+      val actual = Collections.takeOutNegatives(input)
+      assert(expected === actual)
+    }
+
+    it("keepStringsContainingCar"){
+      val input = List("Racecar", "cardinal", "oriole")
+      val expected = List("Racecar", "cardinal")
+
+      val actual = Collections.keepStringsContainingCar(input)
+      assert(expected === actual)
+    }
+  }
+
   describe("Flat Map") {
     it("Uses .flatten to combine nested arrays into one") {
       val input = List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9))
