@@ -5,28 +5,36 @@ object Collections {
     Returns a new list, where every element in the incoming list is multiplied by 3.
   */
   def timesThree(l: List[Int]): List[Int] = {
-    l
+    l.map(_ * 3)
   }
 
   /*
      Returns a new list, where every letter of every element in the incoming list is capitalized.
   */
-  def upper(l: List[String]): List[String] = ???
+  def upper(l: List[String]): List[String] = {
+    l.map(_.toUpperCase)
+  }
 
   /*
     Flattens a two deep list to one level.
    */
-  def flatten(l: List[List[Int]]): List[String] = ???
+  def flatten(l: List[List[Int]]): List[Int] = {
+    l.flatten
+  }
 
   /*
     Returns a new list, where only elements of the list passed in that are 0 or positive numbers are kept.
    */
-  def takeOutNegatives(l: List[Int]): List[Int] = ???
+  def takeOutNegatives(l: List[Int]): List[Int] = {
+    l.filter(_ >= 0)
+  }
 
   /*
     Returns a new list, where only the elements passed in containing "car" are kept to the new list.
    */
-  def keepStringsContainingCar(l: List[String]): List[String] = ???
+  def keepStringsContainingCar(l: List[String]): List[String] = {
+    l.filter(_.toUpperCase.contains("CAR"))
+  }
 
   /*
     Returns a new list, with the depth flattened to 1 and every element in the resulting list multiplied by 3.
