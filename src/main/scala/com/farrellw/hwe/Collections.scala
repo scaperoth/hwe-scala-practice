@@ -16,7 +16,7 @@ object Collections {
   /*
     Flattens a two deep list to one level.
    */
-  def flatten(l: List[List[Int]]): List[String] = ???
+  def flatten(l: List[List[Int]]): List[Int] = ???
 
   /*
     Returns a new list, where only elements of the list passed in that are 0 or positive numbers are kept.
