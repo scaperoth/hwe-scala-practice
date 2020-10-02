@@ -43,7 +43,7 @@ class CollectionsTest extends FunSpec {
   describe("Flat Map") {
     it("Uses .flatten to combine nested arrays into one") {
       val input = List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9))
-      val expected = List(1, 2, 3, 4, 5, 6, 7, 8, 8)
+      val expected = List(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
       val actual = Collections.flatten(input)
 
