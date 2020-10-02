@@ -21,6 +21,24 @@ class OptionEitherTest extends FunSpec {
     }
   }
 
+  describe("Total Cost"){
+    it("Should cost with tax, if a cost is provided"){
+      val item: Item = Item("BoomBox", Some(100))
+      val expected = Some(107)
+
+      val actual = OptionEither.totalCost(item)
+      assert(actual === expected)
+    }
+
+    it("Should return None if no tax is provided"){
+      val item: Item = Item("Free Tickets", None)
+      val expected = None
+
+      val actual = OptionEither.totalCost(item)
+      assert(actual === expected)
+    }
+  }
+
   describe("Average Temperatures List") {
     it("Should return the average temprature"){
 

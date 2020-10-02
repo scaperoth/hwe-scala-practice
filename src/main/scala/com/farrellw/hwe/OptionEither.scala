@@ -15,7 +15,7 @@ object OptionEither {
     Returns the total cost af any item.
     If that item has a price, then the price + 7% of the price should be returned.
   */
-  def totalCost(item: Item): Int = ???
+  def totalCost(item: Item): Option[Double] = ???
 
   /*
     Given a list of weather temperatures, calculates the average temperature across all weather stations.
