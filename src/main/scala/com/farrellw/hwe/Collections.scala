@@ -39,20 +39,28 @@ object Collections {
   /*
     Returns a new list, with the depth flattened to 1 and every element in the resulting list multiplied by 3.
    */
-  def flattenAndMultiply(l: List[List[Int]]): List[Int] = ???
+  def flattenAndMultiply(l: List[List[Int]]): List[Int] = {
+    l.flatMap(_.map(_ * 3))
+  }
 
   /*
     Returns the sum of all numbers passed in.
    */
-  def sumDigits(l: List[Int]): Int = ???
+  def sumDigits(l: List[Int]): Int = {
+    l.foldLeft(0)(_ + _)
+  }
 
   /*
     Uses .foldLeft to implement the map method.
    */
-  def mapUsingFoldLeft(l: List[Int], f: Int => Int): List[Int] = ???
+  def mapUsingFoldLeft(l: List[Int], f: Int => Int): List[Int] = {
+    l.foldLeft(List[Int]())(_ :+ f(_))
+  }
 
   /*
     Uses .foldLeft to implement the flatMap method.
    */
-  def flatMapUsingFoldLeft(l: List[List[String]], f: String => String): List[String] = ???
+  def flatMapUsingFoldLeft(l: List[List[String]], f: String => String): List[String] = {
+    l.foldLeft(List[String]())(_ ++ _.map(f(_)))
+  }
 }
