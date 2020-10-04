@@ -55,16 +55,4 @@ class RomanNumeralTests extends FunSpec {
       assert(actual.isLeft)
     }
   }
-
-  /*
-    Given a complete roman numeral ( e.g. CCX ), returns the numerical equivalent ( e.g. 210 ).
-    If the roman numeral contains any invalid roman numerals, return an exception
-   */
-  def convertRomanToIntLeftRight(s: String): Either[Exception, Int] = ???
-
-  /*
-    Given a number, return the roman numeral equivalent
-   */
-  def convertIntToRoman(i: Int): Option[String] = ???
-
 }
