@@ -1,7 +1,5 @@
 package com.farrellw.hwe.exercises
 
-import java.security.KeyStore.TrustedCertificateEntry
-
 import org.scalatest.FunSpec
 
 class MiscellaneousTests extends FunSpec{
