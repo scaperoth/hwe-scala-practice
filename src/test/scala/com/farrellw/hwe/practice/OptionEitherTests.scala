@@ -2,7 +2,7 @@ package com.farrellw.hwe.practice
 
 import org.scalatest.FunSpec
 
-class OptionEitherTest extends FunSpec {
+class OptionEitherTests extends FunSpec {
   describe("dog age") {
     it("should return none when none is given") {
       val humanAge = None

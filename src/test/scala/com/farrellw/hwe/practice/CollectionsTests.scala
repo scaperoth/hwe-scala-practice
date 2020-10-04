@@ -2,7 +2,7 @@ package com.farrellw.hwe.practice
 
 import org.scalatest.FunSpec
 
-class CollectionsTest extends FunSpec {
+class CollectionsTests extends FunSpec {
   describe("Map") {
     it("Uses .map to multiply everything by 3") {
       val input = List(1, 3, 5, 7, 9)
