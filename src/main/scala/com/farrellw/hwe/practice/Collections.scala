@@ -1,4 +1,4 @@
-package com.farrellw.hwe
+package com.farrellw.hwe.practice
 
 object Collections {
   /*
@@ -60,7 +60,12 @@ object Collections {
   /*
     Uses .foldLeft to implement the flatMap method.
    */
+<<<<<<< HEAD:src/main/scala/com/farrellw/hwe/Collections.scala
   def flatMapUsingFoldLeft(l: List[List[String]], f: String => String): List[String] = {
     l.foldLeft(List[String]())(_ ++ _.map(f(_)))
   }
 }
+=======
+  def flatMapUsingFoldLeft(l: List[List[String]], f: String => String): List[String] = ???
+}
+>>>>>>> master:src/main/scala/com/farrellw/hwe/practice/Collections.scala
