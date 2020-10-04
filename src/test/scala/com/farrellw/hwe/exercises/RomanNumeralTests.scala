@@ -28,7 +28,7 @@ class RomanNumeralTests extends FunSpec {
       assert(actual === expected)
     }
 
-    it("Returns None if the roman numeral is invalid"){
+    it("Returns None if the roman numeral is not valid"){
       val input = "AXV"
       val expected = None
       val actual = RomanNumeral.convertRomanToInt(input)
