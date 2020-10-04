@@ -3,7 +3,7 @@ package com.farrellw.hwe.exercises
 import org.scalatest.FunSpec
 
 class RomanNumeralTests extends FunSpec {
-  describe("[Option Practice] Converts roman numerals to integers"){
+  describe("Converts roman numerals to integers - Working with Options"){
     it("Converts a single roman numeral to int"){
       val input = "X"
       val expected = Some(10)
@@ -37,7 +37,7 @@ class RomanNumeralTests extends FunSpec {
     }
   }
 
-  describe("[Either Practice] Converts a roman numeral to an integer"){
+  describe("Converts a roman numeral to an integer - Working with Either"){
     it("Returns a Right[Int] when a valid roman numeral is passed in"){
       val input = "XV"
       val expected = Right(15)

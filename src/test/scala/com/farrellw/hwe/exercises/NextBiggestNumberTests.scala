@@ -3,7 +3,7 @@ package com.farrellw.hwe.exercises
 import org.scalatest.FunSpec
 
 class NextBiggestNumberTests extends FunSpec{
-  describe("Testing NextBiggestNumber") {
+  describe("Testing NextBiggestNumber - Working with numbers, strings, and lists") {
     it("should return the next biggest number for straightforward examples") {
       assert(NextBiggestNumber.getNextBiggestNumber(12) === 21)
       assert(NextBiggestNumber.getNextBiggestNumber(123) === 132)

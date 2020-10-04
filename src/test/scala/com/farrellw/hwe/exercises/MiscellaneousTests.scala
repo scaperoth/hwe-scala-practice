@@ -5,7 +5,7 @@ import java.security.KeyStore.TrustedCertificateEntry
 import org.scalatest.FunSpec
 
 class MiscellaneousTests extends FunSpec{
-  describe("Minimum"){
+  describe("Minimum - Working with Options"){
     it("Returns the minimum number from a list"){
       val input: List[Option[Int]] = List(Some(1000), None, Some(2000), Some(500), None)
       val expected: Option[Int] =  Some(500)
@@ -31,7 +31,7 @@ class MiscellaneousTests extends FunSpec{
     }
   }
 
-  describe("Acceptable Password"){
+  describe("Acceptable Password - Working with Either"){
     it("Accepts a password with one lowercase and uppercase letter that meets the length requirement."){
       val input = "PASSword123"
       val expected = Right("PASSword123")
@@ -63,7 +63,7 @@ class MiscellaneousTests extends FunSpec{
     }
   }
 
-  describe("isPalidrome"){
+  describe("isPalindrome - Working with Strings"){
     it("Returns true if a word is spelled the same forward and backward"){
       val input = "hannah"
       val expected = true
