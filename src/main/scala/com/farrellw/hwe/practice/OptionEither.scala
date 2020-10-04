@@ -1,4 +1,4 @@
-package com.farrellw.hwe
+package com.farrellw.hwe.practice
 
 case class Item(description: String, price: Option[Int])
 
