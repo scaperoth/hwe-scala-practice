@@ -34,7 +34,7 @@ object Miscellaneous {
   /*
     Checks if a string is palindrome.
    */
-  def isPalindrome(s: String): Boolean = ???
-
-
+  def isPalindrome(s: String): Boolean = {
+    s.reverse == s
+  }
 }
