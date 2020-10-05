@@ -40,11 +40,13 @@ object Collections {
 
   /*
     Uses .foldLeft to implement the map method.
+    / Advanced Problem, feel free to skip /
    */
   def mapUsingFoldLeft(l: List[Int], f: Int => Int): List[Int] = ???
 
   /*
     Uses .foldLeft to implement the flatMap method.
+    / Advanced Problem, feel free to skip /
    */
   def flatMapUsingFoldLeft(l: List[List[String]], f: String => String): List[String] = ???
 }
