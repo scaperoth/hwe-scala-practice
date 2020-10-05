@@ -1,5 +1,6 @@
 package com.farrellw.hwe.exercises
 
+// NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
 object RomanNumeral {
   /*
     Map containing the numerical value to its roman numeral equivalent.
@@ -20,7 +21,7 @@ object RomanNumeral {
   val ROMAN_TO_INT: Map[String, Int] = Map[String, Int](
     "M" -> 1000,
     "D" -> 500,
-    "C" ->  100,
+    "C" -> 100,
     "L" -> 50,
     "X" -> 10,
     "V" -> 5,
@@ -30,12 +31,14 @@ object RomanNumeral {
   /*
     Given a roman numeral ( e.g. CCX ), returns the numerical equivalent ( e.g. 210 ).
     If the roman numeral contains any invalid roman numerals, returns None.
+    // NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
    */
   def convertRomanToInt(s: String): Option[Int] = ???
 
   /*
     Given a complete roman numeral ( e.g. CCX ), returns the numerical equivalent ( e.g. 210 ).
     If the roman numeral contains any invalid roman numerals, return an exception
+    // NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
    */
   def convertRomanToIntEither(s: String): Either[Exception, Int] = ???
 
