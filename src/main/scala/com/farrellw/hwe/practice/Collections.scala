@@ -52,6 +52,7 @@ object Collections {
 
   /*
     Uses .foldLeft to implement the map method.
+    / Advanced Problem, feel free to skip /
    */
   def mapUsingFoldLeft(l: List[Int], f: Int => Int): List[Int] = {
     l.foldLeft(List[Int]())(_ :+ f(_))
@@ -59,6 +60,7 @@ object Collections {
 
   /*
     Uses .foldLeft to implement the flatMap method.
+    / Advanced Problem, feel free to skip /
    */
   def flatMapUsingFoldLeft(l: List[List[String]], f: String => String): List[String] = {
     l.foldLeft(List[String]())(_ ++ _.map(f(_)))

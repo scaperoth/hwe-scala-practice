@@ -30,9 +30,9 @@ class WordCountTests extends FunSpec {
 
     it("Given a list of sentences, should return a map showing count of each word") {
       val sentences: List[String] = List(
-        "to explore strange new worlds,",
+        "to explore strange new worlds",
         "to seek out new life and new civilizations",
-        "to boldly go where no one has gone before!"
+        "to boldly go where no one has gone before"
       )
 
       val expected: Map[String, Int] = Map[String, Int](
