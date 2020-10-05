@@ -44,6 +44,7 @@ object RomanNumeral {
   /*
     Given a complete roman numeral ( e.g. CCX ), returns the numerical equivalent ( e.g. 210 ).
     If the roman numeral contains any invalid roman numerals, return an exception
+    // NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
    */
   def convertRomanToIntEither(s: String): Either[Exception, Int] = {
     val startingValue: Either[Exception, Int] = Right(0)

@@ -2,6 +2,7 @@ package com.farrellw.hwe.exercises
 
 import org.scalatest.FunSpec
 
+// NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
 class RomanNumeralTests extends FunSpec {
   describe("Converts roman numerals to integers - Working with Options"){
     it("Converts a single roman numeral to int"){
@@ -20,6 +21,7 @@ class RomanNumeralTests extends FunSpec {
       assert(actual === expected)
     }
 
+    // NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
     it("Converts a multi-letter roman numeral to a numeral"){
       val input = "CXX"
       val expected = Some(120)
@@ -53,6 +55,24 @@ class RomanNumeralTests extends FunSpec {
       val actual = RomanNumeral.convertRomanToIntEither(input)
 
       assert(actual.isLeft)
+    }
+  }
+
+  describe("Converts a number to a roman numeral - Working with Strings, Tuples, Numbers"){
+    it("Converts a single roman numeral correctly"){
+      val input = 5
+      val expected = "V"
+
+      val actual = RomanNumeral.convertIntToRoman(input)
+      assert(actual === expected)
+    }
+
+    it("Converts a complex roman numeral"){
+      val input = 1125
+      val expected = "MCXXV"
+
+      val actual = RomanNumeral.convertIntToRoman(input)
+      assert(actual === expected)
     }
   }
 }
