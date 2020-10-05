@@ -2,11 +2,18 @@ package com.farrellw.hwe.exercises
 
 object Miscellaneous {
   /*
+    Given a Option[Int]
+      If an int is provided, returns a cats age for the human's age equivalent.
+      If None is provided, return None
+      A humanYear is equivalent to four catYears
+   */
+  def catsAge(humanAge: Option[Int]): Option[Int] = ???
+
+  /*
     Given a list of Option[Ints], returns the minimum of the Ints provided.
     If no ints are provided, return None.
    */
   def minimum(l: List[Option[Int]]): Option[Int] = ???
-
 
   /*
     Checks if an attempted password is valid or invalid.

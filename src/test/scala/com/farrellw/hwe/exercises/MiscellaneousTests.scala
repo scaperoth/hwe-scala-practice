@@ -3,6 +3,25 @@ package com.farrellw.hwe.exercises
 import org.scalatest.FunSpec
 
 class MiscellaneousTests extends FunSpec{
+  describe("Cats age"){
+    it("Returns the cat age from a human age when passed a Some"){
+      val input: Option[Int] = Some(4)
+      val expected: Option[Int] = Some(16)
+
+      val actual = Miscellaneous.catsAge(input)
+      assert(expected === actual)
+    }
+
+    it("Returns a None when passed a None"){
+      val input: Option[Int] = None
+      val expected: Option[Int] = None
+
+      val actual = Miscellaneous.catsAge(input)
+      assert(expected === actual)
+    }
+
+  }
+
   describe("Minimum - Working with Options"){
     it("Returns the minimum number from a list"){
       val input: List[Option[Int]] = List(Some(1000), None, Some(2000), Some(500), None)
