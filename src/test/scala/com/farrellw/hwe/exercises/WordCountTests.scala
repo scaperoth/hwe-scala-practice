@@ -5,12 +5,10 @@ import org.scalatest.FunSpec
 class WordCountTests extends FunSpec {
   describe("Word Count - Working with Strings, Lists, and Maps") {
     it("should be able to split a single sentence into words") {
-      // given
       val sentence = "one two three"
       val expected = List[String]("one", "two", "three")
-      // when
+
       val actual = WordCount.splitSentenceIntoWords(sentence)
-      // then
       assert(actual === expected)
     }
 
