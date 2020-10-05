@@ -4,7 +4,7 @@ object WordCount {
   /*
     Given a single sentence, return a list of words
    */
-  def splitSentenceIntoWords(sentence: String): String = ???
+  def splitSentenceIntoWords(sentence: String): List[String] = ???
 
   /*
     Given a single sentence, return a Map of words to their counts
