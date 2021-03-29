@@ -50,6 +50,13 @@ class OptionEitherTests extends FunSpec {
       assert(actual.get === expected.get)
     }
 
+    it("Should return None when the list is empty"){
+      val temperatures: List[WeatherStation] = List()
+
+      val actual = OptionEither.averageTemperature(temperatures)
+      assert(actual.isEmpty)
+    }
+
     it("Should return None when the list doesn't contain any"){
       val temperatures: List[WeatherStation] = List(WeatherStation("St. Louis", None), WeatherStation("Omaha", None), WeatherStation("Atlanta", None))
 
