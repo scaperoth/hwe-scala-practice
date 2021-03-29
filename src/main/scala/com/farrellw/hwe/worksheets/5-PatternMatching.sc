@@ -1,16 +1,23 @@
-//val states = Map(
-//  "AL" -> "Alabama",
-//  "AK" -> "Alaska",
-//  "IA" -> "Iowa",
-//  "IL" -> "Illinois",
-//  "LA" -> "Louisiana",
-//  "MO" -> "Missouri",
-//  "NE" -> "Nebraska"
-//)
-//
-//states.get("AL")
+val states = Map(
+  "AL" -> "Alabama",
+  "AK" -> "Alaska",
+  "IA" -> "Iowa",
+  "IL" -> "Illinois",
+  "LA" -> "Louisiana",
+  "MO" -> "Missouri",
+  "NE" -> "Nebraska"
+)
 
+val state = states.get("AL")
 
+state match {
+  case Some(s) => {
+    println("Got a state")
+  }
+  case None => {
+    println("Got nothing")
+  }
+}
 
 //case class Candy(name: String, sweet: Boolean, salty: Boolean, chocolatey: Boolean)
 //

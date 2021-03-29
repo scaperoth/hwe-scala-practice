@@ -22,3 +22,7 @@ val capitals = Map(
 states.get("AL").flatMap(capitals.get).map(_.toUpperCase)
 
 
+// Option(databaseCall)
+
+
+

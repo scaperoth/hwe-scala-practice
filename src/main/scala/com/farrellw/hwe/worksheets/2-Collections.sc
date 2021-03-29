@@ -15,3 +15,10 @@ val nums: List[Int] = List(
 )
 
 // map, filter, foldLeft, flatMap, flatten
+
+
+
+// In another language, you might :
+for (n <- nums) {
+  // Multiply each number by 7
+}
