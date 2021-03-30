@@ -34,7 +34,7 @@ object RomanNumeral {
     // NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
    */
   def convertRomanToInt(s: String): Option[Int] = {
-    val keysExist = s.exists(c => ROMAN_TO_INT.contains(c.toString))
+    val keysExist = s.forall(c => ROMAN_TO_INT.contains(c.toString))
     if(keysExist) {
       Some(s.foldLeft(0)((acc, c) => acc + ROMAN_TO_INT.getOrElse(c.toString, 0)))
     }else{
@@ -47,7 +47,16 @@ object RomanNumeral {
     If the roman numeral contains any invalid roman numerals, return an exception
     // NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
    */
-  def convertRomanToIntEither(s: String): Either[Exception, Int] = ???
+  def convertRomanToIntEither(s: String): Either[Exception, Int] = {
+    val keysExist = s.forall(c => ROMAN_TO_INT.contains(c.toString))
+    if(keysExist) {
+      println(s"RIGHT! $s -- $keysExist")
+      Right(s.foldLeft(0)((acc, c) => acc + ROMAN_TO_INT.getOrElse(c.toString, 0)))
+    }else{
+      println("LEFT!")
+      Left(new Exception(s"Invalid Numeral: $s"))
+    }
+  }
 
   /*
     Given a number, return the roman numeral equivalent
