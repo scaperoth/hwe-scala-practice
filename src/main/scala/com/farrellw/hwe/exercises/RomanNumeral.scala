@@ -33,7 +33,14 @@ object RomanNumeral {
     If the roman numeral contains any invalid roman numerals, returns None.
     // NOTE - For simplicity sake, solve assuming old roman numeral style. 4 is IIII and NOT IV
    */
-  def convertRomanToInt(s: String): Option[Int] = ???
+  def convertRomanToInt(s: String): Option[Int] = {
+    val keysExist = s.exists(c => ROMAN_TO_INT.contains(c.toString))
+    if(keysExist) {
+      Some(s.foldLeft(0)((acc, c) => acc + ROMAN_TO_INT.getOrElse(c.toString, 0)))
+    }else{
+      None
+    }
+  }
 
   /*
     Given a complete roman numeral ( e.g. CCX ), returns the numerical equivalent ( e.g. 210 ).
