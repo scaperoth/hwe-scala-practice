@@ -50,10 +50,8 @@ object RomanNumeral {
   def convertRomanToIntEither(s: String): Either[Exception, Int] = {
     val keysExist = s.forall(c => ROMAN_TO_INT.contains(c.toString))
     if(keysExist) {
-      println(s"RIGHT! $s -- $keysExist")
       Right(s.foldLeft(0)((acc, c) => acc + ROMAN_TO_INT.getOrElse(c.toString, 0)))
     }else{
-      println("LEFT!")
       Left(new Exception(s"Invalid Numeral: $s"))
     }
   }
@@ -61,5 +59,21 @@ object RomanNumeral {
   /*
     Given a number, return the roman numeral equivalent
    */
-  def convertIntToRoman(i: Int): Option[String] = ???
+  def convertIntToRoman(i: Int): String = {
+    val sortedRomanIntList = INT_TO_ROMAN.toList.sortWith((x, y) => x._1 > y._1)
+    var total = List.empty[String]
+    var remainder = i
+    sortedRomanIntList.foreach(romanIntKeyValue => {
+      val romanIntKey = romanIntKeyValue._1
+      val romanIntValue = romanIntKeyValue._2
+      val numDivisions = math.floor(remainder/romanIntKey.toFloat).toInt
+      if(numDivisions > 0){
+        val newNumerals = List.fill(numDivisions)(romanIntValue)
+        total = total ++ newNumerals
+      }
+      remainder = remainder - (numDivisions * romanIntKey)
+    })
+
+    total.mkString("")
+  }
 }
